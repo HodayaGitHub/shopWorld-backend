@@ -62,7 +62,7 @@ app.post('/api/toy', (req, res) => {
         price: +req.body.price,
         labels: req.body.labels || [],
         createdAt: Date.now(),
-        inStock: req.body.inStock,
+        inStock: req.body.inStock || 'all',
     }
 
     toyService.save(item, loggedinUser)
@@ -74,7 +74,6 @@ app.post('/api/toy', (req, res) => {
             res.status(400).send('Cannot save item')
         })
 })
-
 
 
 app.get('/**', (req, res) => {
