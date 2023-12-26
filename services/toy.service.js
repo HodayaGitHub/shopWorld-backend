@@ -25,15 +25,15 @@ function getById(id) {
     return Promise.resolve(item)
 }
 
-function remove(id, loggedinUser) {
+function remove(id) {
     const idx = items.findIndex(item => item._id === id)
     if (idx === -1) return Promise.reject('No Such item')
     const item = items[idx]
 
-    if (!loggedinUser.isAdmin &&
-        item.owner._id !== loggedinUser._id) {
-        return Promise.reject('Not your item')
-    }
+    // if (!loggedinUser.isAdmin &&
+    //     item.owner._id !== loggedinUser._id) {
+    //     return Promise.reject('Not your item')
+    // }
     items.splice(idx, 1)
     return _saveItemsToFile()
 }
@@ -41,10 +41,10 @@ function remove(id, loggedinUser) {
 function save(item, loggedinUser) {
     if (item._id) {
         const itemToUpdate = items.find(currItem => currItem._id === item._id)
-        if (!loggedinUser.isAdmin &&
-            itemToUpdate.owner._id !== loggedinUser._id) {
-            return Promise.reject('Not your item')
-        }
+        // if (!loggedinUser.isAdmin &&
+        //     itemToUpdate.owner._id !== loggedinUser._id) {
+            // return Promise.reject('Not your item')
+        // }
 
         itemToUpdate.name = item.name
         itemToUpdate.price = item.price

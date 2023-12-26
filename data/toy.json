@@ -49,12 +49,7 @@
     {
         "_id": "t104",
         "name": "Slinky Dog Toy",
-        "price": 14.99,
-        "labels": [
-            "Slinky",
-            "Dog",
-            "Stretchy"
-        ],
+        "price": 31,
         "createdAt": 1631031801014,
         "inStock": true
     },

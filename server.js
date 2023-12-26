@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import { toyService } from './services/toy.service.js'
 import { loggerService } from './services/logger.service.js'
+import { userService } from './services/user.service.js'
 
 const app = express()
 
@@ -54,9 +55,6 @@ app.get('/api/toy/:itemId', (req, res) => {
 
 // Toy CREATE
 app.post('/api/toy', (req, res) => {
-    const loggedinUser = userService.validateToken(req.cookies.loginToken)
-    if (!loggedinUser) return res.status(401).send('Cannot add item')
-
     const item = {
         name: req.body.name,
         price: +req.body.price,
@@ -65,7 +63,7 @@ app.post('/api/toy', (req, res) => {
         inStock: req.body.inStock || 'all',
     }
 
-    toyService.save(item, loggedinUser)
+    toyService.save(item)
         .then((savedItem) => {
             res.send(savedItem)
         })
@@ -77,17 +75,17 @@ app.post('/api/toy', (req, res) => {
 
 
 // toy UPDATE
-app.put('/api/toy', (req, res) => {
-    const loggedinUser = userService.validateToken(req.cookies.loginToken)
-    if (!loggedinUser) return res.status(401).send('Cannot update item')
+app.put('/api/toy/', (req, res) => {
     const item = {
         _id: req.body._id,
-        vendor: req.body.vendor,
-        speed: +req.body.speed,
+        name: req.body.name,
         price: +req.body.price,
+        inStock: req.body.inStock,
     }
-    toyService.save(item, loggedinUser)
-        .then((savedItem) => {
+
+    toyService.save(item)
+    .then((savedItem) => {
+            console.log('item', item)
             res.send(savedItem)
         })
         .catch((err) => {
@@ -99,16 +97,9 @@ app.put('/api/toy', (req, res) => {
 
 
 // toy DELETE
-app.delete('/api/toy/:toyId', (req, res) => {
-    const loggedinUser = userService.validateToken(req.cookies.loginToken)
-    loggerService.info('loggedinUser item delete:', loggedinUser)
-    if (!loggedinUser) {
-        loggerService.info('Cannot remove item, No user')
-        return res.status(401).send('Cannot remove item')
-    }
-
+app.delete('/api/toy/', (req, res) => {
     const { itemId } = req.params
-    itemService.remove(itemId, loggedinUser)
+    itemService.remove(itemId)
         .then(() => {
             loggerService.info(`item ${itemId} removed`)
             res.send('Removed!')
