@@ -1,6 +1,6 @@
 [
     {
-        "_id": "t101",
+        "_id": "t100",
         "name": "Talking Doll",
         "price": 123,
         "labels": [
@@ -9,6 +9,125 @@
             "Baby"
         ],
         "createdAt": 1631031801011,
+        "inStock": true
+    },
+    {
+        "_id": "t101",
+        "name": "Buzz Lightyear Action Figure",
+        "price": 19.99,
+        "labels": [
+            "Action Figure",
+            "Space Ranger"
+        ],
+        "createdAt": 1631031801011,
+        "inStock": true
+    },
+    {
+        "_id": "t102",
+        "name": "Woody Cowboy Doll",
+        "price": 24.99,
+        "labels": [
+            "Doll",
+            "Cowboy",
+            "Sheriff"
+        ],
+        "createdAt": 1631031801012,
+        "inStock": true
+    },
+    {
+        "_id": "t103",
+        "name": "Jessie Cowgirl Doll",
+        "price": 22.99,
+        "labels": [
+            "Doll",
+            "Cowgirl",
+            "Yodeling"
+        ],
+        "createdAt": 1631031801013,
+        "inStock": true
+    },
+    {
+        "_id": "t104",
+        "name": "Slinky Dog Toy",
+        "price": 14.99,
+        "labels": [
+            "Slinky",
+            "Dog",
+            "Stretchy"
+        ],
+        "createdAt": 1631031801014,
+        "inStock": true
+    },
+    {
+        "_id": "t105",
+        "name": "Rex Dinosaur Figure",
+        "price": 18.99,
+        "labels": [
+            "Dinosaur",
+            "Roar",
+            "T-Rex"
+        ],
+        "createdAt": 1631031801015,
+        "inStock": true
+    },
+    {
+        "_id": "t106",
+        "name": "Mr. Potato Head",
+        "price": 16.99,
+        "labels": [
+            "Potato",
+            "Mix-and-Match",
+            "Funny Face"
+        ],
+        "createdAt": 1631031801016,
+        "inStock": true
+    },
+    {
+        "_id": "t107",
+        "name": "Bo Peep Shepherdess Doll",
+        "price": 21.99,
+        "labels": [
+            "Doll",
+            "Shepherdess",
+            "Lost Sheep"
+        ],
+        "createdAt": 1631031801017,
+        "inStock": true
+    },
+    {
+        "_id": "t108",
+        "name": "Hamm Piggy Bank",
+        "price": 12.99,
+        "labels": [
+            "Piggy Bank",
+            "Coins",
+            "Saving"
+        ],
+        "createdAt": 1631031801018,
+        "inStock": true
+    },
+    {
+        "_id": "t109",
+        "name": "Green Army Men Set",
+        "price": 17.99,
+        "labels": [
+            "Army Men",
+            "Plastic",
+            "Toy Soldiers"
+        ],
+        "createdAt": 1631031801019,
+        "inStock": true
+    },
+    {
+        "_id": "t110",
+        "name": "Aliens Squeeze Toy",
+        "price": 15.99,
+        "labels": [
+            "Squeeze Toy",
+            "Little Green Men",
+            "Claw Game"
+        ],
+        "createdAt": 1631031801020,
         "inStock": true
     }
 ]
