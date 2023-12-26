@@ -14,6 +14,8 @@ const corsOptions = {
         'http://localhost:8080',
         'http://127.0.0.1:5173',
         'http://localhost:5173',
+        'http://127.0.0.1:5174',
+        'http://localhost:5174',
     ],
     credentials: true
 }
@@ -40,7 +42,48 @@ app.get('/api/toy', (req, res) => {
 })
 
 
+// app.get('/api/toy', (req, res) => {
+//     // const filterBy = {
+//     //     txt: req.query.txt || '',
+//     //     maxPrice: +req.query.maxPrice || 0,
+//     // }
+
+//     const filterBy = {}
+
+//     if (req.query.txt) {
+//         filterBy.txt = req.query.txt;
+//     }
+
+//     if (req.query.maxPrice) {
+//         filterBy.maxPrice = +req.query.maxPrice;
+//     }
+
+
+
+//     toyService.query(filterBy)
+//         .then((items) => {
+//             res.send(items)
+//         })
+//         .catch((err) => {
+//             loggerService.error('Cannot get items', err)
+//             res.status(400).send('Cannot get items')
+//         })
+// })
+
 // Toy READ
+
+app.get('/api/toy/alltoys', (req, res) => {
+    toyService.queryAll()
+        .then((items) => {
+            // console.log(items);
+            res.send(items)
+        })
+        .catch((err) => {
+            loggerService.error('Cannot get items', err)
+            res.status(400).send('Cannot get items')
+        })
+})
+
 app.get('/api/toy/:itemId', (req, res) => {
     const { itemId } = req.params
     toyService.getById(itemId)
@@ -85,7 +128,7 @@ app.put('/api/toy/', (req, res) => {
 
     toyService.save(item)
     .then((savedItem) => {
-            console.log('item', item)
+            // console.log('item', item)
             res.send(savedItem)
         })
         .catch((err) => {

@@ -6,7 +6,8 @@ export const toyService = {
     query,
     getById,
     remove,
-    save
+    save, 
+    queryAll
 }
 
 const items = utilService.readJsonFile('data/toy.json')
@@ -19,6 +20,11 @@ function query(filterBy = { txt: '' }) {
     }
     return Promise.resolve(itemsToReturn)
 }
+
+function queryAll() {
+    return Promise.resolve(items)
+}
+
 
 function getById(id) {
     const item = items.find(item => item._id === id)
