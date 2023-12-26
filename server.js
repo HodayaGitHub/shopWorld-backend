@@ -97,9 +97,9 @@ app.put('/api/toy/', (req, res) => {
 
 
 // toy DELETE
-app.delete('/api/toy/', (req, res) => {
+app.delete('/api/toy/:itemId', (req, res) => {
     const { itemId } = req.params
-    itemService.remove(itemId)
+    toyService.remove(itemId)
         .then(() => {
             loggerService.info(`item ${itemId} removed`)
             res.send('Removed!')
