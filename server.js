@@ -5,6 +5,7 @@ import cors from 'cors'
 import { toyService } from './services/toy.service.js'
 import { loggerService } from './services/logger.service.js'
 import { userService } from './services/user.service.js'
+import { mapService } from './services/map.service.js'
 
 const app = express()
 
@@ -127,7 +128,7 @@ app.put('/api/toy/', (req, res) => {
     }
 
     toyService.save(item)
-    .then((savedItem) => {
+        .then((savedItem) => {
             // console.log('item', item)
             res.send(savedItem)
         })
@@ -152,6 +153,20 @@ app.delete('/api/toy/:itemId', (req, res) => {
             res.status(400).send('Cannot remove item')
         })
 
+})
+
+
+// Map api
+
+app.get('/api/map', (req, res) => {
+    mapService.queryMap()
+        .then((mapData) => {
+            res.json(mapData)
+        })
+        .catch((error) => {
+            console.error('Error fetching map data:', error)
+            res.status(500).json({ error: 'Internal Server Error' })
+        })
 })
 
 
