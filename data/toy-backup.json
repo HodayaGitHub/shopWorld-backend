@@ -20,7 +20,7 @@
             "Space Ranger"
         ],
         "createdAt": 1631031801011,
-        "inStock": true
+        "inStock": false
     },
     {
         "_id": "t102",
@@ -32,7 +32,7 @@
             "Sheriff"
         ],
         "createdAt": 1631031801012,
-        "inStock": true
+        "inStock": false
     },
     {
         "_id": "t103",
@@ -44,7 +44,7 @@
             "Yodeling"
         ],
         "createdAt": 1631031801013,
-        "inStock": true
+        "inStock": false
     },
     {
         "_id": "t104",
@@ -56,7 +56,7 @@
             "Stretchy"
         ],
         "createdAt": 1631031801014,
-        "inStock": true
+        "inStock": false
     },
     {
         "_id": "t105",
@@ -68,7 +68,7 @@
             "T-Rex"
         ],
         "createdAt": 1631031801015,
-        "inStock": true
+        "inStock": false
     },
     {
         "_id": "t106",
@@ -80,7 +80,7 @@
             "Funny Face"
         ],
         "createdAt": 1631031801016,
-        "inStock": true
+        "inStock": false
     },
     {
         "_id": "t107",
