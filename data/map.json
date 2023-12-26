@@ -4,24 +4,36 @@
         "type": "Feature",
         "properties": {
           "PARK_ID": 960,
-          "NAME": "Bearbrook Skateboard Park",
-          "DESCRIPTIO": "Flat asphalt surface, 5 components"
+          "NAME": "17 Ha-Shikma Street, Tel Aviv",
+          "DESCRIPTIO": "17 Ha-Shikma Street, Tel Aviv"
         },
         "geometry": {
           "type": "Point",
-          "coordinates": [-75.3372987731628, 45.383321536272049]
+          "coordinates": [32.054110, 34.757060]
         }
       },
       {
         "type": "Feature",
         "properties": {
           "PARK_ID": 1219,
-          "NAME": "Bob MacQuarrie Skateboard Park (SK8 Extreme Park)",
-          "DESCRIPTIO": "Flat asphalt surface, 10 components, City run learn to skateboard programs, City run skateboard camps in summer"
+          "NAME": "45 Herzl Street, Holon",
+          "DESCRIPTIO": "45 Herzl Street, Holon"
         },
         "geometry": {
           "type": "Point",
-          "coordinates": [-75.546518086577947, 45.467134581917357]
+          "coordinates": [40.669020, -73.915380]
+        }
+      }, 
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 1211,
+          "NAME": "8 Ha-Histadrut Avenue, Rishon Letzion",
+          "DESCRIPTIO": "8 Ha-Histadrut Avenue, Rishon Letzion"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [31.668320,34.783370]
         }
       }
     ]
