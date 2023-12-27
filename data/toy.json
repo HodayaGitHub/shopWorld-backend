@@ -3,6 +3,7 @@
         "_id": "t100",
         "name": "Talking Doll",
         "price": 123,
+        "imageFilename": "toystory-dinosaur",
         "labels": [
             "Doll",
             "Battery Powered",
@@ -15,9 +16,11 @@
         "_id": "t101",
         "name": "Buzz Lightyear Action Figure",
         "price": 19.99,
+        "imageFilename": "toystory-buzz",
         "labels": [
-            "Action Figure",
-            "Space Ranger"
+            "Doll",
+            "Battery Powered",
+            "Baby"
         ],
         "createdAt": 1631031801011,
         "inStock": true
@@ -26,6 +29,7 @@
         "_id": "t102",
         "name": "Woody Cowboy Doll",
         "price": 24.99,
+        "imageFilename": "toystory-woody",
         "labels": [
             "Doll",
             "Cowboy",
@@ -38,10 +42,11 @@
         "_id": "t103",
         "name": "Jessie Cowgirl Doll",
         "price": 22.99,
+        "imageFilename": "toystory-cowgirl",
         "labels": [
             "Doll",
             "Cowgirl",
-            "Yodeling"
+            "Sheriff"
         ],
         "createdAt": 1631031801013,
         "inStock": true
@@ -50,6 +55,7 @@
         "_id": "t104",
         "name": "Slinky Dog Toy",
         "price": 14.99,
+        "imageFilename": "toystory-dinosaur",
         "labels": [
             "Slinky",
             "Dog",
@@ -62,72 +68,195 @@
         "_id": "t105",
         "name": "Rex Dinosaur Figure",
         "price": 18.99,
+        "imageFilename": "toystory-dinosaur",
         "labels": [
             "Dinosaur",
-            "Roar",
-            "T-Rex"
+            "Doll",
+            "Battery Powered"
         ],
         "createdAt": 1631031801015,
         "inStock": true
     },
     {
         "_id": "t106",
-        "name": "Mr. Potato Head",
+        "name": "Ms. Potato Head",
         "price": 16.99,
+        "imageFilename": "toystory-ms-potato",
         "labels": [
-            "Potato",
-            "Mix-and-Match",
-            "Funny Face"
+            "Baby",
+            "Doll",
+            "Potato"
         ],
         "createdAt": 1631031801016,
-        "inStock": false
+        "inStock": true
     },
     {
         "_id": "t107",
         "name": "Bo Peep Shepherdess Doll",
         "price": 21.99,
+        "imageFilename": "toystory-dinosaur",
         "labels": [
             "Doll",
-            "Shepherdess",
-            "Lost Sheep"
+            "baby",
+            "Sheep"
         ],
         "createdAt": 1631031801017,
-        "inStock": false
+        "inStock": true
     },
     {
         "_id": "t108",
         "name": "Hamm Piggy Bank",
         "price": 12.99,
+        "imageFilename": "toystory-pig",
         "labels": [
             "Piggy Bank",
             "Coins",
-            "Saving"
+            "Doll"
         ],
         "createdAt": 1631031801018,
-        "inStock": false
+        "inStock": true
     },
     {
         "_id": "t109",
         "name": "Green Army Men Set",
         "price": 17.99,
+        "imageFilename": "toystory-dinosaur",
         "labels": [
             "Army Men",
             "Plastic",
             "Toy Soldiers"
         ],
         "createdAt": 1631031801019,
-        "inStock": false
+        "inStock": true
     },
     {
         "_id": "t110",
         "name": "Aliens Squeeze Toy",
         "price": 15.99,
+        "imageFilename": "toystory-alien",
         "labels": [
             "Squeeze Toy",
-            "Little Green Men",
-            "Claw Game"
+            "Outdoor",
+            "Plastic"
         ],
         "createdAt": 1631031801020,
-        "inStock": false
+        "inStock": true
+    },
+    {
+        "_id": "t111",
+        "name": "Mr. Potato Head",
+        "price": 16.99,
+        "imageFilename": "toystory-mr-potato",
+        "labels": [
+            "Baby",
+            "Doll",
+            "Potato"
+        ],
+        "createdAt": 1631031801016,
+        "inStock": true
+    },
+    {
+        "_id": "t112",
+        "name": "Bo Peep Shepherdess Doll",
+        "price": 21.99,
+        "imageFilename": "toystory-dinosaur",
+        "labels": [
+            "Doll",
+            "baby",
+            "Sheep"
+        ],
+        "createdAt": 1631031801017,
+        "inStock": true
+    },
+    {
+        "_id": "t113",
+        "name": "Hamm Piggy Bank",
+        "price": 12.99,
+        "imageFilename": "toystory-pig",
+        "labels": [
+            "Piggy Bank",
+            "Coins",
+            "Doll"
+        ],
+        "createdAt": 1631031801018,
+        "inStock": true
+    },
+    {
+        "_id": "t114",
+        "name": "Green Army Men Set",
+        "price": 17.99,
+        "imageFilename": "toystory-dinosaur",
+        "labels": [
+            "Army Men",
+            "Plastic",
+            "Toy Soldiers"
+        ],
+        "createdAt": 1631031801019,
+        "inStock": true
+    },
+    {
+        "_id": "t115",
+        "name": "Aliens Squeeze Toy",
+        "price": 15.99,
+        "imageFilename": "toystory-alien",
+        "labels": [
+            "Squeeze Toy",
+            "Outdoor",
+            "Plastic"
+        ],
+        "createdAt": 1631031801020,
+        "inStock": true
+    },
+    {
+        "_id": "t116",
+        "name": "Mr. Potato Head",
+        "price": 16.99,
+        "imageFilename": "toystory-mr-potato",
+        "labels": [
+            "Baby",
+            "Doll",
+            "Potato"
+        ],
+        "createdAt": 1631031801016,
+        "inStock": true
+    }, 
+    {
+        "_id": "t117",
+        "name": "Green Army Men Set",
+        "price": 17.99,
+        "imageFilename": "toystory-dinosaur",
+        "labels": [
+            "Army Men",
+            "Plastic",
+            "Toy Soldiers"
+        ],
+        "createdAt": 1631031801019,
+        "inStock": true
+    },
+    {
+        "_id": "t118",
+        "name": "Aliens Squeeze Toy",
+        "price": 15.99,
+        "imageFilename": "toystory-alien",
+        "labels": [
+            "Squeeze Toy",
+            "Outdoor",
+            "Plastic"
+        ],
+        "createdAt": 1631031801020,
+        "inStock": true
+    },
+    {
+        "_id": "t119",
+        "name": "Mr. Potato Head",
+        "price": 16.99,
+        "imageFilename": "toystory-mr-potato",
+        "labels": [
+            "Baby",
+            "Doll",
+            "Potato"
+        ],
+        "createdAt": 1631031801016,
+        "inStock": true
     }
 ]
