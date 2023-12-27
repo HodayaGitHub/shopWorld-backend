@@ -27,24 +27,6 @@ app.use(cookieParser())
 app.use(express.json())
 
 
-// if (process.env.NODE_ENV === 'production') {
-//     // Express serve static files on production environment
-//     app.use(express.static(path.resolve('public/index.html')))
-// } else {
-//     // Configuring CORS
-//     const corsOptions = {
-//         // Make sure origin contains the url your frontend is running on
-//         origin: ['http://127.0.0.1:8080',
-//             'http://localhost:8080',
-//             'http://127.0.0.1:5173',
-//             'http://localhost:5173',
-//             'http://127.0.0.1:5174',
-//             'http://localhost:5174',],
-//         credentials: true
-//     }
-//     app.use(cors(corsOptions))
-// }
-
 app.get('/api/toy', (req, res) => {
     console.log('hellooooo');
     const filterBy = {
@@ -60,35 +42,6 @@ app.get('/api/toy', (req, res) => {
             res.status(400).send('Cannot get items')
         })
 })
-
-
-// app.get('/api/toy', (req, res) => {
-//     // const filterBy = {
-//     //     txt: req.query.txt || '',
-//     //     maxPrice: +req.query.maxPrice || 0,
-//     // }
-
-//     const filterBy = {}
-
-//     if (req.query.txt) {
-//         filterBy.txt = req.query.txt;
-//     }
-
-//     if (req.query.maxPrice) {
-//         filterBy.maxPrice = +req.query.maxPrice;
-//     }
-
-
-
-//     toyService.query(filterBy)
-//         .then((items) => {
-//             res.send(items)
-//         })
-//         .catch((err) => {
-//             loggerService.error('Cannot get items', err)
-//             res.status(400).send('Cannot get items')
-//         })
-// })
 
 // Toy READ
 
@@ -122,8 +75,8 @@ app.post('/api/toy', (req, res) => {
         name: req.body.name,
         price: +req.body.price,
         labels: req.body.labels || [],
-        createdAt: Date.now(),
         inStock: req.body.inStock || 'all',
+        createdAt: Date.now(),
     }
 
     toyService.save(item)
@@ -136,14 +89,16 @@ app.post('/api/toy', (req, res) => {
         })
 })
 
-
 // toy UPDATE
 app.put('/api/toy/', (req, res) => {
     const item = {
         _id: req.body._id,
         name: req.body.name,
         price: +req.body.price,
+        labels: req.body.labels,
         inStock: req.body.inStock,
+        createdAt: req.body.createdAt,
+        updatedAt: req.body.updatedAt,
     }
 
     toyService.save(item)

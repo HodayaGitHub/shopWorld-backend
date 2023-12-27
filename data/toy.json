@@ -1,16 +1,15 @@
 [
     {
         "_id": "t100",
-        "name": "Talking Doll",
-        "price": 123,
-        "imageFilename": "toystory-dinosaur",
+        "name": "Buzz Lightyear Action Figure",
+        "price": 19.99,
+        "imageFilename": "toystory-buzz",
         "labels": [
-            "Doll",
-            "Battery Powered",
-            "Baby"
+            "Action Figure",
+            "Space Ranger"
         ],
         "createdAt": 1631031801011,
-        "inStock": true
+        "inStock": false
     },
     {
         "_id": "t101",
@@ -18,16 +17,15 @@
         "price": 19.99,
         "imageFilename": "toystory-buzz",
         "labels": [
-            "Doll",
-            "Battery Powered",
-            "Baby"
+            "Action Figure",
+            "Space Ranger"
         ],
         "createdAt": 1631031801011,
-        "inStock": true
+        "inStock": false
     },
     {
         "_id": "t102",
-        "name": "Woody Cowboy Doll",
+        "name": "Woody",
         "price": 24.99,
         "imageFilename": "toystory-woody",
         "labels": [
@@ -219,7 +217,7 @@
         ],
         "createdAt": 1631031801016,
         "inStock": true
-    }, 
+    },
     {
         "_id": "t117",
         "name": "Green Army Men Set",
