@@ -21,29 +21,29 @@ const corsOptions = {
     credentials: true
 }
 
-// app.use(cors(corsOptions))
-// app.use(express.static('public'))
+app.use(cors(corsOptions))
+app.use(express.static('public'))
 app.use(cookieParser())
 app.use(express.json())
 
 
-if (process.env.NODE_ENV === 'production') {
-    // Express serve static files on production environment
-    app.use(express.static(path.resolve('public/index.html')))
-} else {
-    // Configuring CORS
-    const corsOptions = {
-        // Make sure origin contains the url your frontend is running on
-        origin: ['http://127.0.0.1:8080',
-            'http://localhost:8080',
-            'http://127.0.0.1:5173',
-            'http://localhost:5173',
-            'http://127.0.0.1:5174',
-            'http://localhost:5174',],
-        credentials: true
-    }
-    app.use(cors(corsOptions))
-}
+// if (process.env.NODE_ENV === 'production') {
+//     // Express serve static files on production environment
+//     app.use(express.static(path.resolve('public/index.html')))
+// } else {
+//     // Configuring CORS
+//     const corsOptions = {
+//         // Make sure origin contains the url your frontend is running on
+//         origin: ['http://127.0.0.1:8080',
+//             'http://localhost:8080',
+//             'http://127.0.0.1:5173',
+//             'http://localhost:5173',
+//             'http://127.0.0.1:5174',
+//             'http://localhost:5174',],
+//         credentials: true
+//     }
+//     app.use(cors(corsOptions))
+// }
 
 app.get('/api/toy', (req, res) => {
     console.log('hellooooo');
