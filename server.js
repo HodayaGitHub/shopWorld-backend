@@ -73,17 +73,17 @@ app.get('/api/toy', (req, res) => {
 
 // Toy READ
 
-app.get('/api/toy/alltoys', (req, res) => {
-    toyService.queryAll()
-        .then((items) => {
-            // console.log(items);
-            res.send(items)
-        })
-        .catch((err) => {
-            loggerService.error('Cannot get items', err)
-            res.status(400).send('Cannot get items')
-        })
-})
+// app.get('/api/toy/alltoys', (req, res) => {
+//     toyService.queryAll()
+//         .then((items) => {
+//             // console.log(items);
+//             res.send(items)
+//         })
+//         .catch((err) => {
+//             loggerService.error('Cannot get items', err)
+//             res.status(400).send('Cannot get items')
+//         })
+// })
 
 app.get('/api/toy/:itemId', (req, res) => {
     const { itemId } = req.params
