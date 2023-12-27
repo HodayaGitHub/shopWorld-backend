@@ -158,7 +158,6 @@ app.delete('/api/toy/:itemId', (req, res) => {
 
 
 // Map api
-
 app.get('/api/map', (req, res) => {
     mapService.queryMap()
         .then((mapData) => {
