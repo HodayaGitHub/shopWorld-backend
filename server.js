@@ -28,6 +28,7 @@ app.use(express.json())
 
 
 app.get('/api/toy', (req, res) => {
+    console.log('hellooooo');
     const filterBy = {
         txt: req.query.txt || '',
         maxPrice: +req.query.maxPrice || 0,
