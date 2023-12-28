@@ -31,8 +31,6 @@ export async function getById(req, res) {
     }
 }
 
-
-
 export async function removeToy(req, res) {
     try {
         const { toyId } = req.params
@@ -46,3 +44,14 @@ export async function removeToy(req, res) {
     }
 }
 
+export async function updateToy(req, res) {
+    try {
+        const toy = req.body
+        console.log(toy)
+        const updatedToy = await toyService.update(toy)
+        res.json(updatedToy)
+    } catch (err) {
+        logger.error('Failed to update toy', err)
+        res.status(500).send({ err: 'Failed to update toy' })
+    }
+}

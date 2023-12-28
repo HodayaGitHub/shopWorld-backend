@@ -38,46 +38,6 @@ app.use(express.json())
 import { toyRoutes } from './api/toy/toy.routes.js'
 app.use('/api/toy', toyRoutes)
 
-// toy UPDATE
-app.put('/api/toy/', (req, res) => {
-    const item = {
-        _id: req.body._id,
-        name: req.body.name,
-        price: +req.body.price,
-        labels: req.body.labels,
-        inStock: req.body.inStock,
-        createdAt: req.body.createdAt,
-        updatedAt: req.body.updatedAt,
-    }
-
-    toyService.save(item)
-        .then((savedItem) => {
-            // console.log('item', item)
-            res.send(savedItem)
-        })
-        .catch((err) => {
-            logger.error('Cannot save item', err)
-            res.status(400).send('Cannot save item')
-        })
-
-})
-
-
-
-
-// app.get('/api/toy/:itemId', (req, res) => {
-//     const { itemId } = req.params
-//     toyService.getById(itemId)
-//         .then((item) => {
-//             res.send(item)
-//         })
-//         .catch((err) => {
-//             logger.error('Cannot get item', err)
-//             res.status(400).send('Cannot get item')
-//         })
-// })
-
-// Toy CREATE
 
 
 app.post('/api/toy', (req, res) => {
@@ -99,22 +59,6 @@ app.post('/api/toy', (req, res) => {
         })
 })
 
-
-
-// toy DELETE
-// app.delete('/api/toy/:itemId', (req, res) => {
-//     const { itemId } = req.params
-//     toyService.remove(itemId)
-//         .then(() => {
-//             logger.info(`item ${itemId} removed`)
-//             res.send('Removed!')
-//         })
-//         .catch((err) => {
-//             logger.error('Cannot remove item', err)
-//             res.status(400).send('Cannot remove item')
-//         })
-
-// })
 
 
 // Map api
