@@ -1,12 +1,13 @@
 import express from 'express'
 import { log } from '../../middlewares/logger.middleware.js'
-import {getToys, getById, removeToy, updateToy}  from './toy.controller.js'
+import {getToys, getById, removeToy, updateToy, addToy}  from './toy.controller.js'
 import { requireAuth, requireAdmin } from '../../middlewares/requireAuth.middleware.js'
 
 export const toyRoutes = express.Router()
 
 toyRoutes.get('/', log, getToys)
 toyRoutes.put('/', updateToy)
+toyRoutes.post('/', addToy)
 toyRoutes.get('/:id', getById)
 toyRoutes.delete('/:id', removeToy)
 

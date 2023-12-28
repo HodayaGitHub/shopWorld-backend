@@ -55,3 +55,17 @@ export async function updateToy(req, res) {
         res.status(500).send({ err: 'Failed to update toy' })
     }
 }
+
+export async function addToy(req, res) {
+    // const { loggedinUser } = req
+
+    try {
+        const toy = req.body
+        toy.owner = loggedinUser
+        const addedToy = await toyService.add(toy)
+        res.json(addedToy)
+    } catch (err) {
+        logger.error('Failed to add toy', err)
+        res.status(500).send({ err: 'Failed to add toy' })
+    }
+}

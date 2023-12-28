@@ -9,7 +9,7 @@ export const toyService = {
     query,
     getById,
     remove,
-    // save,
+    add,
     update,
 }
 
@@ -74,6 +74,17 @@ async function update(toy) {
         return toy
     } catch (err) {
         logger.error(`cannot update toy ${toy._id}`, err)
+        throw err
+    }
+}
+
+async function add(toy) {
+    try {
+        const collection = await dbService.getCollection('toys')
+        await collection.insertOne(toy)
+        return toy
+    } catch (err) {
+        logger.error('cannot insert car', err)
         throw err
     }
 }
