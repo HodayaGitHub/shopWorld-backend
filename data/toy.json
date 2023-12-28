@@ -1,6 +1,5 @@
 [
     {
-        "_id": "t100",
         "name": "Buzz Lightyear Action Figure",
         "price": 19.99,
         "imageFilename": "toystory-buzz",
@@ -8,11 +7,9 @@
             "Action Figure",
             "Space Ranger"
         ],
-        "createdAt": 1631031801011,
         "inStock": false
     },
     {
-        "_id": "t101",
         "name": "Buzz Lightyear Action Figure",
         "price": 19.99,
         "imageFilename": "toystory-buzz",
@@ -20,11 +17,9 @@
             "Action Figure",
             "Space Ranger"
         ],
-        "createdAt": 1631031801011,
         "inStock": false
     },
     {
-        "_id": "t102",
         "name": "Woody Cowboy Doll",
         "price": 24.99,
         "imageFilename": "toystory-woody",
@@ -33,11 +28,9 @@
             "Cowboy",
             "Sheriff"
         ],
-        "createdAt": 1631031801012,
         "inStock": true
     },
     {
-        "_id": "t103",
         "name": "Jessie Cowgirl Doll",
         "price": 22.99,
         "imageFilename": "toystory-cowgirl",
@@ -46,11 +39,9 @@
             "Cowgirl",
             "Sheriff"
         ],
-        "createdAt": 1631031801013,
         "inStock": true
     },
     {
-        "_id": "t104",
         "name": "Slinky Dog Toy",
         "price": 14.99,
         "imageFilename": "toystory-dinosaur",
@@ -59,11 +50,9 @@
             "Dog",
             "Stretchy"
         ],
-        "createdAt": 1631031801014,
         "inStock": true
     },
     {
-        "_id": "t105",
         "name": "Rex Dinosaur Figure",
         "price": 18.99,
         "imageFilename": "toystory-dinosaur",
@@ -72,11 +61,9 @@
             "Doll",
             "Battery Powered"
         ],
-        "createdAt": 1631031801015,
         "inStock": true
     },
     {
-        "_id": "t106",
         "name": "Ms. Potato Head",
         "price": 16.99,
         "imageFilename": "toystory-ms-potato",
@@ -85,11 +72,9 @@
             "Doll",
             "Potato"
         ],
-        "createdAt": 1631031801016,
         "inStock": true
     },
     {
-        "_id": "t107",
         "name": "Bo Peep Shepherdess Doll",
         "price": 21.99,
         "imageFilename": "toystory-dinosaur",
@@ -98,11 +83,9 @@
             "baby",
             "Sheep"
         ],
-        "createdAt": 1631031801017,
         "inStock": true
     },
     {
-        "_id": "t108",
         "name": "Hamm Piggy Bank",
         "price": 12.99,
         "imageFilename": "toystory-pig",
@@ -111,11 +94,9 @@
             "Coins",
             "Doll"
         ],
-        "createdAt": 1631031801018,
         "inStock": true
     },
     {
-        "_id": "t109",
         "name": "Green Army Men Set",
         "price": 17.99,
         "imageFilename": "toystory-dinosaur",
@@ -124,11 +105,9 @@
             "Plastic",
             "Toy Soldiers"
         ],
-        "createdAt": 1631031801019,
         "inStock": true
     },
     {
-        "_id": "t110",
         "name": "Aliens Squeeze Toy",
         "price": 15.99,
         "imageFilename": "toystory-alien",
@@ -137,11 +116,9 @@
             "Outdoor",
             "Plastic"
         ],
-        "createdAt": 1631031801020,
         "inStock": true
     },
     {
-        "_id": "t111",
         "name": "Mr. Potato Head",
         "price": 16.99,
         "imageFilename": "toystory-mr-potato",
@@ -150,11 +127,9 @@
             "Doll",
             "Potato"
         ],
-        "createdAt": 1631031801016,
         "inStock": true
     },
     {
-        "_id": "t112",
         "name": "Bo Peep Shepherdess Doll",
         "price": 21.99,
         "imageFilename": "toystory-dinosaur",
@@ -163,11 +138,9 @@
             "baby",
             "Sheep"
         ],
-        "createdAt": 1631031801017,
         "inStock": true
     },
     {
-        "_id": "t113",
         "name": "Hamm Piggy Bank",
         "price": 12.99,
         "imageFilename": "toystory-pig",
@@ -176,11 +149,9 @@
             "Coins",
             "Doll"
         ],
-        "createdAt": 1631031801018,
         "inStock": true
     },
     {
-        "_id": "t114",
         "name": "Green Army Men Set",
         "price": 17.99,
         "imageFilename": "toystory-dinosaur",
@@ -189,11 +160,9 @@
             "Plastic",
             "Toy Soldiers"
         ],
-        "createdAt": 1631031801019,
         "inStock": true
     },
     {
-        "_id": "t115",
         "name": "Aliens Squeeze Toy",
         "price": 15.99,
         "imageFilename": "toystory-alien",
@@ -202,11 +171,9 @@
             "Outdoor",
             "Plastic"
         ],
-        "createdAt": 1631031801020,
         "inStock": true
     },
     {
-        "_id": "t116",
         "name": "Mr. Potato Head",
         "price": 16.99,
         "imageFilename": "toystory-mr-potato",
@@ -215,11 +182,9 @@
             "Doll",
             "Potato"
         ],
-        "createdAt": 1631031801016,
         "inStock": true
     },
     {
-        "_id": "t117",
         "name": "Green Army Men Set",
         "price": 17.99,
         "imageFilename": "toystory-dinosaur",
@@ -228,11 +193,9 @@
             "Plastic",
             "Toy Soldiers"
         ],
-        "createdAt": 1631031801019,
         "inStock": true
     },
     {
-        "_id": "t118",
         "name": "Aliens Squeeze Toy",
         "price": 15.99,
         "imageFilename": "toystory-alien",
@@ -241,11 +204,9 @@
             "Outdoor",
             "Plastic"
         ],
-        "createdAt": 1631031801020,
         "inStock": true
     },
     {
-        "_id": "t119",
         "name": "Mr. Potato Head",
         "price": 16.99,
         "imageFilename": "toystory-mr-potato",
@@ -254,7 +215,6 @@
             "Doll",
             "Potato"
         ],
-        "createdAt": 1631031801016,
         "inStock": true
     }
 ]

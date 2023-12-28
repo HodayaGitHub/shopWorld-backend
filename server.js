@@ -6,9 +6,8 @@ import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 // TODO: delete these when refactoring is done
-import { toyService } from './api/toy/toy.service.js'
-import { loggerService } from './services/logger.service.js'
-import { userService } from './services/user.service.js'
+// import { toyService } from './api/toy/toy.service.js'
+import { logger } from './services/logger.service.js'
 import { mapService } from './services/map.service.js'
 
 const app = express()
@@ -39,68 +38,6 @@ app.use(express.json())
 import { toyRoutes } from './api/toy/toy.routes.js'
 app.use('/api/toy', toyRoutes)
 
-
-// app.get('/api/toy', (req, res) => {
-//     // const filterBy = {
-//     //     txt: req.query.txt || '',
-//     //     maxPrice: +req.query.maxPrice || 0,
-//     // }
-//     toyService.query()
-//         .then((items) => {
-//             res.send(items)
-//         })
-//         .catch((err) => {
-//             loggerService.error('Cannot get items', err)
-//             res.status(400).send('Cannot get items')
-//         })
-// })
-
-// Toy READ
-
-// app.get('/api/toy/alltoys', (req, res) => {
-//     toyService.queryAll()
-//         .then((items) => {
-//             // console.log(items);
-//             res.send(items)
-//         })
-//         .catch((err) => {
-//             loggerService.error('Cannot get items', err)
-//             res.status(400).send('Cannot get items')
-//         })
-// })
-
-app.get('/api/toy/:itemId', (req, res) => {
-    const { itemId } = req.params
-    toyService.getById(itemId)
-        .then((item) => {
-            res.send(item)
-        })
-        .catch((err) => {
-            loggerService.error('Cannot get item', err)
-            res.status(400).send('Cannot get item')
-        })
-})
-
-// Toy CREATE
-app.post('/api/toy', (req, res) => {
-    const item = {
-        name: req.body.name,
-        price: +req.body.price,
-        labels: req.body.labels || [],
-        inStock: req.body.inStock || 'all',
-        createdAt: Date.now(),
-    }
-
-    toyService.save(item)
-        .then((savedItem) => {
-            res.send(savedItem)
-        })
-        .catch((err) => {
-            loggerService.error('Cannot save item', err)
-            res.status(400).send('Cannot save item')
-        })
-})
-
 // toy UPDATE
 app.put('/api/toy/', (req, res) => {
     const item = {
@@ -119,27 +56,65 @@ app.put('/api/toy/', (req, res) => {
             res.send(savedItem)
         })
         .catch((err) => {
-            loggerService.error('Cannot save item', err)
+            logger.error('Cannot save item', err)
             res.status(400).send('Cannot save item')
         })
 
 })
 
 
-// toy DELETE
-app.delete('/api/toy/:itemId', (req, res) => {
-    const { itemId } = req.params
-    toyService.remove(itemId)
-        .then(() => {
-            loggerService.info(`item ${itemId} removed`)
-            res.send('Removed!')
+
+
+// app.get('/api/toy/:itemId', (req, res) => {
+//     const { itemId } = req.params
+//     toyService.getById(itemId)
+//         .then((item) => {
+//             res.send(item)
+//         })
+//         .catch((err) => {
+//             logger.error('Cannot get item', err)
+//             res.status(400).send('Cannot get item')
+//         })
+// })
+
+// Toy CREATE
+
+
+app.post('/api/toy', (req, res) => {
+    const item = {
+        name: req.body.name,
+        price: +req.body.price,
+        labels: req.body.labels || [],
+        inStock: req.body.inStock || 'all',
+        createdAt: Date.now(),
+    }
+
+    toyService.save(item)
+        .then((savedItem) => {
+            res.send(savedItem)
         })
         .catch((err) => {
-            loggerService.error('Cannot remove item', err)
-            res.status(400).send('Cannot remove item')
+            logger.error('Cannot save item', err)
+            res.status(400).send('Cannot save item')
         })
-
 })
+
+
+
+// toy DELETE
+// app.delete('/api/toy/:itemId', (req, res) => {
+//     const { itemId } = req.params
+//     toyService.remove(itemId)
+//         .then(() => {
+//             logger.info(`item ${itemId} removed`)
+//             res.send('Removed!')
+//         })
+//         .catch((err) => {
+//             logger.error('Cannot remove item', err)
+//             res.status(400).send('Cannot remove item')
+//         })
+
+// })
 
 
 // Map api
@@ -162,5 +137,5 @@ app.get('/**', (req, res) => {
 
 const port = process.env.PORT || 3030
 app.listen(port, () =>
-    loggerService.info(`Server listening on port http://127.0.0.1:${port}/`)
+    logger.info(`Server listening on port http://127.0.0.1:${port}/`)
 )
