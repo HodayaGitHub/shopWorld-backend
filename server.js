@@ -6,7 +6,7 @@ import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 // TODO: delete these when refactoring is done
-import { toyService } from './services/toy.service.js'
+import { toyService } from './api/toy/toy.service.js'
 import { loggerService } from './services/logger.service.js'
 import { userService } from './services/user.service.js'
 import { mapService } from './services/map.service.js'
@@ -37,24 +37,24 @@ app.use(express.json())
 
 
 
+import { toyRoutes } from './api/toy/toy.routes.js'
+app.use('/api/toy', toyRoutes)
 
 
-
-app.get('/api/toy', (req, res) => {
-    console.log('hellooooo');
-    const filterBy = {
-        txt: req.query.txt || '',
-        maxPrice: +req.query.maxPrice || 0,
-    }
-    toyService.query(filterBy)
-        .then((items) => {
-            res.send(items)
-        })
-        .catch((err) => {
-            loggerService.error('Cannot get items', err)
-            res.status(400).send('Cannot get items')
-        })
-})
+// app.get('/api/toy', (req, res) => {
+//     const filterBy = {
+//         txt: req.query.txt || '',
+//         maxPrice: +req.query.maxPrice || 0,
+//     }
+//     toyService.query(filterBy)
+//         .then((items) => {
+//             res.send(items)
+//         })
+//         .catch((err) => {
+//             loggerService.error('Cannot get items', err)
+//             res.status(400).send('Cannot get items')
+//         })
+// })
 
 // Toy READ
 
