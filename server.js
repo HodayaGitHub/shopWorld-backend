@@ -1,7 +1,11 @@
-import path from 'path'
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
+
+import path, { dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+// TODO: delete these when refactoring is done
 import { toyService } from './services/toy.service.js'
 import { loggerService } from './services/logger.service.js'
 import { userService } from './services/user.service.js'
@@ -9,22 +13,31 @@ import { mapService } from './services/map.service.js'
 
 const app = express()
 
-const corsOptions = {
-    origin: [
-        'http://127.0.0.1:8080',
-        'http://localhost:8080',
-        'http://127.0.0.1:5173',
-        'http://localhost:5173',
-        'http://127.0.0.1:5174',
-        'http://localhost:5174',
-    ],
-    credentials: true
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.resolve(__dirname, 'public')))
+    console.log('__dirname: ', __dirname)
+} else {
+    const corsOptions = {
+        origin: ['http://127.0.0.1:5173', 'http://localhost:5173'],
+        credentials: true
+    }
+    app.use(cors(corsOptions))
 }
 
-app.use(cors(corsOptions))
+
+// Express App Config
 app.use(express.static('public'))
 app.use(cookieParser())
 app.use(express.json())
+
+
+
+
 
 
 app.get('/api/toy', (req, res) => {

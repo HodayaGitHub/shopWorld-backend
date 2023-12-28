@@ -3,7 +3,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 960,
+          "STORE_ID": 960,
           "NAME": "17 Ha-Shikma Street, Tel Aviv",
           "DESCRIPTIO": "17 Ha-Shikma Street, Tel Aviv"
         },
@@ -15,7 +15,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 1219,
+          "STORE_ID": 1219,
           "NAME": "45 Herzl Street, Holon",
           "DESCRIPTIO": "45 Herzl Street, Holon"
         },
@@ -27,7 +27,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 1211,
+          "STORE_ID": 1211,
           "NAME": "8 Ha-Histadrut Avenue, Rishon Letzion",
           "DESCRIPTIO": "8 Ha-Histadrut Avenue, Rishon Letzion"
         },
