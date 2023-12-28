@@ -4,4 +4,4 @@ import {getToys} from './toy.controller.js'
 
 export const toyRoutes = express.Router()
 
-toyRoutes.get('/', log, getToys)
+toyRoutes.get('/', getToys)

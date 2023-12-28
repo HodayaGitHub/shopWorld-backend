@@ -1,53 +1,39 @@
 import fs from 'fs'
+
+import { ObjectId } from 'mongodb'
+import { dbService } from '../../services/db.service.js'
+
 import { utilService } from '../../services/util.service.js'
 import { loggerService } from '../../services/logger.service.js'
-import { dbService } from '../../services/db.service.js'
+
 
 export const toyService = {
     query,
     getById,
     remove,
     save,
-    queryAll
 }
 
 // const items = utilService.readJsonFile('data/toy.json')
 
 
-async function query(filterBy = { txt: '', maxPrice }) {
+async function query(filterBy = { txt: '', maxPrice}) {
     try {
         const criteria = {
-            name: { $regex: filterBy.txt, $options: 'i' },
+            txt: { $regex: filterBy.txt, $options: 'i' },
             maxPrice: { $lte: filterBy.maxPrice }
         }
-        var collection = await dbService.getCollection('toy')
-        var toys = await collection.find(criteria).toArray()
-
+        var collection = await dbService.getCollection('toys')
+        var toys = await collection.find({}).toArray()
+        // console.log(toys)
         return toys
     } catch (err) {
-        logger.error('cannot find toys', err)
+        loggerService.error('cannot find toys', err)
         throw err
     }
 }
 
 
-
-
-// function query(filterBy = { txt: '' }) {
-//     const regex = new RegExp(filterBy.txt, 'i')
-//     var itemsToReturn = items.filter(item => regex.test(item.name))
-//     if (filterBy.maxPrice) {
-//         itemsToReturn = itemsToReturn.filter(item => item.price <= filterBy.maxPrice)
-//     }
-//     return Promise.resolve(itemsToReturn)
-// }
-
-
-
-
-function queryAll() {
-    return Promise.resolve(items)
-}
 
 
 function getById(id) {

@@ -11,6 +11,7 @@ export async function getToys(req, res) {
 
         loggerService.debug('Getting Toys', filterBy)
         const toys = await toyService.query(filterBy)
+        // console.log('Received toys:', toys)
         res.json(toys)
 
     } catch (err) {
@@ -18,3 +19,4 @@ export async function getToys(req, res) {
         res.status(500).send({ err: 'Failed to get toy' })
     }
 }
+
