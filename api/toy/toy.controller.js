@@ -10,7 +10,7 @@ export async function getToys(req, res) {
             labels: req.query.labels || [],
         }
 
-        logger.debug('Getting Toys', filterBy)
+        // logger.debug('Getting Toys', filterBy)
         const toys = await toyService.query(filterBy)
         res.json(toys)
 

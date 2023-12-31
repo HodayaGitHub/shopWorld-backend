@@ -15,7 +15,7 @@ export const authService = {
 const cryptr = new Cryptr(process.env.SECRET1 || 'Secret-Puk-1234')
 
 async function login(username, password) {
-    console.log(username, password);
+    console.log(username, password)
     logger.debug(`auth.service - login with username: ${username}`)
 
     const user = await userService.getByUsername(username)
@@ -31,21 +31,22 @@ async function login(username, password) {
     return user
 }
 
-async function signup(username, password, fullname) {
+async function signup(username, password, fullname, isAdmin) {
     const saltRounds = 10
 
     logger.debug(`auth.service - signup with username: ${username}, fullname: ${fullname}`)
-    if (!username || !password || !fullname) throw new Error('Missing details')
+    if (!username || !password || !fullname || !isAdmin) throw new Error('Missing details')
 
     const hash = await bcrypt.hash(password, saltRounds)
-    return userService.add({ username, password: hash, fullname })
+    return userService.add({ username, password: hash, fullname, isAdmin})
 }
 
 function getLoginToken(user) {
     const userInfo = { 
         _id : user._id, 
         username: user.username, 
-        isAdmin: user.isAdmin 
+        isAdmin: user.isAdmin, 
+        fullname: user.fullname,
     }
     return cryptr.encrypt(JSON.stringify(userInfo))    
 }
