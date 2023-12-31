@@ -37,7 +37,6 @@ export async function removeToy(req, res) {
         await toyService.remove(toyId)
         logger.info(`Toy ${toyId} removed`)
         res.send()
-
     } catch (err) {
         logger.error('Cannot remove item', err)
         res.status(500).send({ err: 'Failed to remove toy' })

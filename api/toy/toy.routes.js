@@ -6,17 +6,18 @@ import { requireAuth, requireAdmin } from '../../middlewares/requireAuth.middlew
 export const toyRoutes = express.Router()
 
 toyRoutes.get('/', log, getToys)
-toyRoutes.put('/', updateToy)
 toyRoutes.post('/', addToy)
 toyRoutes.get('/:id', getById)
-toyRoutes.delete('/:id', removeToy)
 
+// admin required:
+toyRoutes.put('/', requireAdmin, updateToy)
+toyRoutes.delete('/:toyId', requireAdmin, removeToy)
 
-
-// TODO: Uncomment these routes after creating a users and auth
-// toyRoutes.post('/', requireAuth, addToy)
-// toyRoutes.put('/:id', requireAuth, updateToy)
-// toyRoutes.delete('/:id', requireAuth, removeToy)
 
 // toyRoutes.post('/:id/msg', requireAuth, addToyMsg)
 // toyRoutes.delete('/:id/msg/:msgId', requireAuth, removeToyMsg)
+
+
+// toyRoutes.put('/', updateToy)
+// toyRoutes.post('/', requireAuth, addToy)
+// toyRoutes.delete('/:id', removeToy)

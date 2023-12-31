@@ -53,16 +53,17 @@ async function getById(toyId) {
 
 async function remove(toyId) {
     try {
-        const collection = await dbService.getCollection('toy')
+        const collection = await dbService.getCollection('toys')
         await collection.deleteOne({ _id: new ObjectId(toyId) })
     } catch (err) {
-        logger.error(`cannot remove toy ${toyId}`, err)
+        logger.error(`cannot remove car ${toyId}`, err)
         throw err
     }
 }
 
 async function update(toy) {
     try {
+        console.log('toy to remove', toy)
         const toyToSave = {
             name: toy.name,
             price: toy.price,
