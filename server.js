@@ -38,40 +38,12 @@ app.use(express.json())
 import { toyRoutes } from './api/toy/toy.routes.js'
 app.use('/api/toy', toyRoutes)
 
+import { authRoutes } from './api/auth/auth.routes.js'
+app.use('/api/auth', authRoutes)
 
+import { userRoutes } from './api/user/user.routes.js'
+app.use('/api/user', userRoutes)
 
-app.post('/api/toy', (req, res) => {
-    const item = {
-        name: req.body.name,
-        price: +req.body.price,
-        labels: req.body.labels || [],
-        inStock: req.body.inStock || 'all',
-        createdAt: Date.now(),
-    }
-
-    toyService.save(item)
-        .then((savedItem) => {
-            res.send(savedItem)
-        })
-        .catch((err) => {
-            logger.error('Cannot save item', err)
-            res.status(400).send('Cannot save item')
-        })
-})
-
-
-
-// Map api
-app.get('/api/map', (req, res) => {
-    mapService.queryMap()
-        .then((mapData) => {
-            res.json(mapData)
-        })
-        .catch((error) => {
-            console.error('Error fetching map data:', error)
-            res.status(500).json({ error: 'Internal Server Error' })
-        })
-})
 
 
 app.get('/**', (req, res) => {
@@ -83,3 +55,43 @@ const port = process.env.PORT || 3030
 app.listen(port, () =>
     logger.info(`Server listening on port http://127.0.0.1:${port}/`)
 )
+
+
+// app.post('/api/toy', (req, res) => {
+//     const item = {
+//         name: req.body.name,
+//         price: +req.body.price,
+//         labels: req.body.labels || [],
+//         inStock: req.body.inStock || 'all',
+//         createdAt: Date.now(),
+//     }
+
+//     toyService.save(item)
+//         .then((savedItem) => {
+//             res.send(savedItem)
+//         })
+//         .catch((err) => {
+//             logger.error('Cannot save item', err)
+//             res.status(400).send('Cannot save item')
+//         })
+// })
+
+
+
+// Map api
+
+// TODO: remove after changing the map 
+
+
+// app.get('/api/map', (req, res) => {
+//     mapService.queryMap()
+//         .then((mapData) => {
+//             res.json(mapData)
+//         })
+//         .catch((error) => {
+//             console.error('Error fetching map data:', error)
+//             res.status(500).json({ error: 'Internal Server Error' })
+//         })
+// })
+
+

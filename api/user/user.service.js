@@ -8,6 +8,7 @@ export const userService = {
     query,
     getById,
     getByUsername,
+    getByFullName,
     remove,
     update,
     add
@@ -17,10 +18,10 @@ async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('user')
-        var users = await collection.find(criteria).sort({nickname: -1}).toArray()
+        var users = await collection.find(criteria).sort({ username: -1 }).toArray()
         users = users.map(user => {
             delete user.password
-            user.isHappy = true
+            // user.isHappy = true
             user.createdAt = ObjectId(user._id).getTimestamp()
             // Returning fake fresh data
             // user.createdAt = Date.now() - (1000 * 60 * 60 * 24 * 3) // 3 days ago
@@ -48,9 +49,21 @@ async function getByUsername(username) {
     try {
         const collection = await dbService.getCollection('user')
         const user = await collection.findOne({ username })
+        console.log('username from mongo', username)
         return user
     } catch (err) {
         logger.error(`while finding user ${username}`, err)
+        throw err
+    }
+}
+
+async function getByFullName(fullname) {
+    try {
+        const collection = await dbService.getCollection('user')
+        const user = await collection.findOne({ fullname })
+        return user
+    } catch (err) {
+        logger.error(`while finding user ${fullname}`, err)
         throw err
     }
 }
@@ -94,7 +107,6 @@ async function add(user) {
             username: user.username,
             password: user.password,
             fullname: user.fullname,
-            score: user.score || 0
         }
         const collection = await dbService.getCollection('user')
         await collection.insertOne(userToAdd)

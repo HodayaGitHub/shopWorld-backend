@@ -57,7 +57,7 @@ export async function updateToy(req, res) {
 }
 
 export async function addToy(req, res) {
-    // const { loggedinUser } = req
+    const { loggedinUser } = req
 
     try {
         const toy = req.body
