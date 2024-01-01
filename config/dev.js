@@ -1,4 +1,4 @@
 export default {
-    dbURL: 'mongodb://127.0.0.1:27017/',
+    dbURL: 'mongodb+srv://hodaya:hodaya123@cluster0.lgjxe6a.mongodb.net/',
     dbName: 'toy_db',
 }

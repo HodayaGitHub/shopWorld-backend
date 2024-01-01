@@ -4,14 +4,13 @@ import { logger } from "../../services/logger.service.js"
 
 export async function getToys(req, res) {
     try {
-        const filterBy = {
-            txt: req.query.txt || '',
-            maxPrice: +req.query.maxPrice,
-            labels: req.query.labels || [],
-        }
+        console.log(req.query
+            )
+        const { filterBy, sortBy } = req.query
 
         // logger.debug('Getting Toys', filterBy)
-        const toys = await toyService.query(filterBy)
+        const toys = await toyService.query(filterBy, sortBy)
+
         res.json(toys)
 
     } catch (err) {
