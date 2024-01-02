@@ -1,3 +1,4 @@
+import http from 'http'
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
@@ -11,6 +12,7 @@ import { logger } from './services/logger.service.js'
 import { mapService } from './services/map.service.js'
 
 const app = express()
+const server = http.createServer(app)
 
 
 const __filename = fileURLToPath(import.meta.url)
@@ -52,7 +54,7 @@ app.get('/**', (req, res) => {
 
 
 const port = process.env.PORT || 3030
-app.listen(port, () =>
+server.listen(port, () =>
     logger.info(`Server listening on port http://127.0.0.1:${port}/`)
 )
 
