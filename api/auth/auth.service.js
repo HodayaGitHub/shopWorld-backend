@@ -21,7 +21,7 @@ async function login(username, password) {
     const user = await userService.getByUsername(username)
     if (!user) throw new Error('user error: Invalid username or password')
 
-    console.log('passwords:', password, user.password); 
+    console.log('passwords:', password, user.password);
     // const match = await bcrypt.compare(password, user.password)
     const match = await bcrypt.compare(password.trim(), user.password.trim())
 
@@ -31,24 +31,28 @@ async function login(username, password) {
     return user
 }
 
-async function signup(username, password, fullname, isAdmin) {
+async function signup(username, password, fullname, email, isAdmin ) {
     const saltRounds = 10
 
-    logger.debug(`auth.service - signup with username: ${username}, fullname: ${fullname}`)
-    if (!username || !password || !fullname || !isAdmin) throw new Error('Missing details')
+    logger.debug(`auth.service - 
+    signup with username: ${username},
+     fullname: ${fullname}
+     email:${email} `)
+    if (!username || !password || !fullname || !email) throw new Error('Missing details')
 
     const hash = await bcrypt.hash(password, saltRounds)
-    return userService.add({ username, password: hash, fullname, isAdmin})
+    return userService.add({ username, password: hash, fullname, isAdmin, email})
 }
 
 function getLoginToken(user) {
-    const userInfo = { 
-        _id : user._id, 
-        username: user.username, 
+    const userInfo = {
+        _id: user._id,
+        username: user.username,
         fullname: user.fullname,
-        isAdmin: user.isAdmin, 
+        isAdmin: user.isAdmin,
+        email: user.email,
     }
-    return cryptr.encrypt(JSON.stringify(userInfo))    
+    return cryptr.encrypt(JSON.stringify(userInfo))
 }
 
 function validateToken(loginToken) {
@@ -56,7 +60,7 @@ function validateToken(loginToken) {
         const json = cryptr.decrypt(loginToken)
         const loggedinUser = JSON.parse(json)
         return loggedinUser
-    } catch(err) {
+    } catch (err) {
         console.log('Invalid login token')
     }
     return null
