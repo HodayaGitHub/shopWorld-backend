@@ -1,8 +1,8 @@
-import {dbService} from '../../services/db.service.js'
-import {logger} from '../../services/logger.service.js'
-import {asyncLocalStorage} from '../../services/als.service.js'
+import { dbService } from '../../services/db.service.js'
+import { logger } from '../../services/logger.service.js'
+import { asyncLocalStorage } from '../../services/als.service.js'
 import mongodb from 'mongodb'
-const {ObjectId} = mongodb
+const { ObjectId } = mongodb
 
 async function query(filterBy = {}) {
     try {
@@ -60,9 +60,9 @@ async function remove(reviewId) {
         const { loggedinUser } = store
         const collection = await dbService.getCollection('review')
         // remove only if user is owner/admin
-        const criteria = { _id: ObjectId(reviewId) }
-        if (!loggedinUser.isAdmin) criteria.byUserId = ObjectId(loggedinUser._id)
-        const {deletedCount} = await collection.deleteOne(criteria)
+        const criteria = { _id: new ObjectId(reviewId) }
+        if (!loggedinUser.isAdmin) criteria.byUserId = new ObjectId(loggedinUser._id)
+        const { deletedCount } = await collection.deleteOne(criteria)
         return deletedCount
     } catch (err) {
         logger.error(`cannot remove review ${reviewId}`, err)
@@ -74,8 +74,8 @@ async function remove(reviewId) {
 async function add(review) {
     try {
         const reviewToAdd = {
-            byUserId: ObjectId(review.byUserId),
-            aboutUserId: ObjectId(review.aboutUserId),
+            byUserId: new ObjectId(review.byUserId),
+            aboutUserId: new ObjectId(review.aboutUserId),
             txt: review.txt
         }
         const collection = await dbService.getCollection('review')

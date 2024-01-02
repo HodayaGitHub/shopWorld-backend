@@ -48,7 +48,6 @@ async function query(filterBy, sortBy) {
     }
 }
 
-
 async function getById(toyId) {
     try {
         const collection = await dbService.getCollection('toy')
