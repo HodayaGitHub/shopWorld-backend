@@ -1,4 +1,7 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 export default {
-    dbURL: 'mongodb+srv://hodaya:hodaya123@store.lgjxe6a.mongodb.net/',
+    dbURL:  process.env.DB_URL,
     dbName: 'toy_db',
 }
