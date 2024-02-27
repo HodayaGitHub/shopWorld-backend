@@ -2,219 +2,363 @@
     {
         "name": "Buzz Lightyear Action Figure",
         "price": 19.99,
-        "imageFilename": "toystory-buzz",
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708971771/myStore/toys/toystory-buzz.png",
         "labels": [
             "Action Figure",
             "Space Ranger"
         ],
-        "inStock": false
-    },
-    {
-        "name": "Buzz Lightyear Action Figure",
-        "price": 19.99,
-        "imageFilename": "toystory-buzz",
-        "labels": [
-            "Action Figure",
-            "Space Ranger"
-        ],
+        "category": "toys",
         "inStock": false
     },
     {
         "name": "Woody Cowboy Doll",
         "price": 24.99,
-        "imageFilename": "toystory-woody",
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708971776/myStore/toys/toystory-woody.png",
         "labels": [
             "Doll",
             "Cowboy",
             "Sheriff"
         ],
+        "category": "toys",
         "inStock": true
     },
     {
         "name": "Jessie Cowgirl Doll",
         "price": 22.99,
-        "imageFilename": "toystory-cowgirl",
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708971776/myStore/toys/toystory-cowgirl.png",
         "labels": [
             "Doll",
             "Cowgirl",
             "Sheriff"
         ],
+        "category": "toys",
         "inStock": true
     },
     {
         "name": "Slinky Dog Toy",
         "price": 14.99,
-        "imageFilename": "toystory-dinosaur",
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708971776/myStore/toys/toystory-Slinky-Dog.png",
         "labels": [
             "Slinky",
             "Dog",
             "Stretchy"
         ],
+        "category": "toys",
         "inStock": true
     },
     {
         "name": "Rex Dinosaur Figure",
         "price": 18.99,
-        "imageFilename": "toystory-dinosaur",
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708971776/myStore/toys/toystory-Rex-dinosaur.png",
         "labels": [
             "Dinosaur",
             "Doll",
             "Battery Powered"
         ],
+        "category": "toys",
         "inStock": true
     },
     {
         "name": "Ms. Potato Head",
         "price": 16.99,
-        "imageFilename": "toystory-ms-potato",
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708971776/myStore/toys/toystory-ms-potato.png",
         "labels": [
             "Baby",
             "Doll",
             "Potato"
         ],
+        "category": "toys",
         "inStock": true
     },
     {
-        "name": "Bo Peep Shepherdess Doll",
-        "price": 21.99,
-        "imageFilename": "toystory-dinosaur",
+        "name": "Mr. Potato Head",
+        "price": 16.99,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708971776/myStore/toys/toystory-mr-potato.png",
         "labels": [
+            "Baby",
             "Doll",
-            "baby",
-            "Sheep"
+            "Potato"
         ],
+        "category": "toys",
         "inStock": true
     },
     {
         "name": "Hamm Piggy Bank",
         "price": 12.99,
-        "imageFilename": "toystory-pig",
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708971776/myStore/toys/toystory-Hamm-Piggy.png",
         "labels": [
             "Piggy Bank",
             "Coins",
             "Doll"
         ],
-        "inStock": true
-    },
-    {
-        "name": "Green Army Men Set",
-        "price": 17.99,
-        "imageFilename": "toystory-dinosaur",
-        "labels": [
-            "Army Men",
-            "Plastic",
-            "Toy Soldiers"
-        ],
+        "category": "toys",
         "inStock": true
     },
     {
         "name": "Aliens Squeeze Toy",
         "price": 15.99,
-        "imageFilename": "toystory-alien",
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708971776/myStore/toys/toystory-alien.png",
         "labels": [
             "Squeeze Toy",
             "Outdoor",
             "Plastic"
         ],
+        "category": "toys",
         "inStock": true
     },
     {
-        "name": "Mr. Potato Head",
-        "price": 16.99,
-        "imageFilename": "toystory-mr-potato",
+        "name": "Apple iPhone 14 126GB",
+        "price": 1349,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973888/myStore/electronics/mobile/Apple_iPhone_14_126GB.webp",
         "labels": [
-            "Baby",
-            "Doll",
-            "Potato"
+            "iPhone",
+            "phone",
+            "mobile",
+            "electronic"
         ],
+        "category": "phone",
         "inStock": true
     },
     {
-        "name": "Bo Peep Shepherdess Doll",
-        "price": 21.99,
-        "imageFilename": "toystory-dinosaur",
+        "name": "Xiaomi Redmi Note 13 8GB 256GB",
+        "price": 648,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973891/myStore/electronics/mobile/Xiaomi_Redmi_Note_13_8GB_256GB.jpg",
         "labels": [
-            "Doll",
-            "baby",
-            "Sheep"
+            "Xiaomi",
+            "phone",
+            "mobile",
+            "electronic"
         ],
+        "category": "phone",
         "inStock": true
     },
     {
-        "name": "Hamm Piggy Bank",
-        "price": 12.99,
-        "imageFilename": "toystory-pig",
+        "name": "Apple iPhone 14 256GB",
+        "price": 1250,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973889/myStore/electronics/mobile/Apple_iPhone_14_256GB.webp",
         "labels": [
-            "Piggy Bank",
-            "Coins",
-            "Doll"
+            "iPhone",
+            "phone",
+            "mobile",
+            "electronic"
         ],
+        "category": "phone",
         "inStock": true
     },
     {
-        "name": "Green Army Men Set",
-        "price": 17.99,
-        "imageFilename": "toystory-dinosaur",
+        "name": "Apple iPhone 14 256GB Yellow",
+        "price": 1250,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973889/myStore/electronics/mobile/Apple_iPhone_14_256GB_-_Yellow_nzxlwx.webp",
         "labels": [
-            "Army Men",
-            "Plastic",
-            "Toy Soldiers"
+            "iPhone",
+            "phone",
+            "mobile",
+            "electronic"
         ],
+        "category": "phone",
         "inStock": true
     },
     {
-        "name": "Aliens Squeeze Toy",
-        "price": 15.99,
-        "imageFilename": "toystory-alien",
+        "name": "Apple iPhone 15 128GB",
+        "price": 1390,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973889/myStore/electronics/mobile/Apple_iPhone_15_128GB_sbb12p.jpg",
         "labels": [
-            "Squeeze Toy",
-            "Outdoor",
-            "Plastic"
+            "iPhone",
+            "phone",
+            "mobile",
+            "electronic"
         ],
+        "category": "phone",
         "inStock": true
     },
     {
-        "name": "Mr. Potato Head",
-        "price": 16.99,
-        "imageFilename": "toystory-mr-potato",
+        "name": "Apple iPhone 15 Pro Max 256GB",
+        "price": 1390,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973884/myStore/electronics/mobile/Apple_iPhone_15_Pro_Max_256GB_nfcujv.jpg",
         "labels": [
-            "Baby",
-            "Doll",
-            "Potato"
+            "iPhone",
+            "phone",
+            "mobile",
+            "electronic"
         ],
+        "category": "phone",
         "inStock": true
     },
     {
-        "name": "Green Army Men Set",
-        "price": 17.99,
-        "imageFilename": "toystory-dinosaur",
+        "name": "Samsung Galaxy Z Flip5 8GB 256GB",
+        "price": 935,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973887/myStore/electronics/mobile/Samsung_Galaxy_Z_Flip5_8GB_256GB_kgsdvj.jpg",
         "labels": [
-            "Army Men",
-            "Plastic",
-            "Toy Soldiers"
+            "Samsung",
+            "phone",
+            "mobile",
+            "electronic"
         ],
+        "category": "phone",
         "inStock": true
     },
     {
-        "name": "Aliens Squeeze Toy",
-        "price": 15.99,
-        "imageFilename": "toystory-alien",
+        "name": "Samsung Galaxy S24 12GB 256GB",
+        "price": 1100,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973886/myStore/electronics/mobile/Samsung_Galaxy_S24_12GB_256GB_nsmcjb.jpg",
         "labels": [
-            "Squeeze Toy",
-            "Outdoor",
-            "Plastic"
+            "Samsung",
+            "phone",
+            "mobile",
+            "electronic"
         ],
+        "category": "phone",
         "inStock": true
     },
     {
-        "name": "Mr. Potato Head",
-        "price": 16.99,
-        "imageFilename": "toystory-mr-potato",
+        "name": "Samsung Galaxy S24 12GB 256GB - Titanuim Black",
+        "price": 950,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973886/myStore/electronics/mobile/Samsung_Galaxy_S24_12GB_256GB_-_Titanuim_Black_shjfsc.jpg",
         "labels": [
-            "Baby",
-            "Doll",
-            "Potato"
+            "Samsung",
+            "phone",
+            "mobile",
+            "electronic"
         ],
+        "category": "phone",
+        "inStock": true
+    },
+    {
+        "name": "Samsung Galaxy S23 8GB 256GB",
+        "price": 875,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973885/myStore/electronics/mobile/Samsung_Galaxy_S23_8GB_256GB_rbdwtr.jpg",
+        "labels": [
+            "Samsung",
+            "phone",
+            "mobile",
+            "electronic"
+        ],
+        "category": "phone",
+        "inStock": true
+    },
+    {
+        "name": "Samsung Galaxy S24 Ultra 12GB 256GB",
+        "price": 689,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973885/myStore/electronics/mobile/Samsung_Galaxy_S24_Ultra_12GB_256GB_t2fvr3.jpg",
+        "labels": [
+            "Samsung",
+            "phone",
+            "mobile",
+            "electronic"
+        ],
+        "category": "phone",
+        "inStock": true
+    },
+    {
+        "name": "Samsung Galaxy S23 8GB 256GB - Lavender",
+        "price": 689,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708973884/myStore/electronics/mobile/Samsung_Galaxy_S23_8GB_256GB_-_Lavender_z8ogzr.jpg",
+        "labels": [
+            "Samsung",
+            "phone",
+            "mobile",
+            "electronic"
+        ],
+        "category": "phone",
+        "inStock": true
+    },
+    {
+        "name": "SpeedLink Trailblazer",
+        "price": 689,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708975436/myStore/electronics/gaming/SpeedLink_Trailblazer_nlfdqy.png",
+        "labels": [
+            "gaming",
+            "electronic"
+        ],
+        "category": "gaming",
+        "inStock": true
+    },
+    {
+        "name": "Thrustmaster T80 Ferrari 488 GTB Edition",
+        "price": 349,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708975435/myStore/electronics/gaming/Thrustmaster_T80_Ferrari_488_GTB_Edition_pzbd24.png",
+        "labels": [
+            "gaming",
+            "electronic"
+        ],
+        "category": "gaming",
+        "inStock": true
+    },
+    {
+        "name": "Microsoft Xbox Series-X",
+        "price": 200,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708975433/myStore/electronics/gaming/Microsoft_Xbox_Series-X_q0uevg.png",
+        "labels": [
+            "gaming",
+            "electronic"
+        ],
+        "category": "gaming",
+        "inStock": true
+    },
+    {
+        "name": "Asus AeroActive Cooler",
+        "price": 249,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708975432/myStore/electronics/gaming/Asus_AeroActive_Cooler_rhqxbw.png",
+        "labels": [
+            "gaming",
+            "electronic"
+        ],
+        "category": "gaming",
+        "inStock": true
+    },
+    {
+        "name": "Microsoft Xbox Series-X - Gold",
+        "price": 278,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708975432/myStore/electronics/gaming/Microsoft_Xbox_Series-X_-_Gold_apjnhx.png",
+        "labels": [
+            "gaming",
+            "electronic"
+        ],
+        "category": "gaming",
+        "inStock": true
+    },
+    {
+        "name": "Meta Quest 3 128G",
+        "price": 420,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708975431/myStore/electronics/gaming/Meta_Quest_3_128G_zad5qv.png",
+        "labels": [
+            "gaming",
+            "electronic"
+        ],
+        "category": "gaming",
+        "inStock": true
+    },
+    {
+        "name": "Meta Quest 2 128GB",
+        "price": 540,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708975430/myStore/electronics/gaming/Meta_Quest_2_128GB_kcfj0d.png",
+        "labels": [
+            "gaming",
+            "electronic"
+        ],
+        "category": "gaming",
+        "inStock": true
+    },
+    {
+        "name": "Backbone One",
+        "price": 190,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708975429/myStore/electronics/gaming/Backbone_One_swlw7h.png",
+        "labels": [
+            "gaming",
+            "electronic"
+        ],
+        "category": "gaming",
+        "inStock": true
+    },
+    {
+        "name": "hrustmaster T128P",
+        "price": 210,
+        "imgSrc": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1708975428/myStore/electronics/gaming/Thrustmaster_T128P_ge6wzm.png",
+        "labels": [
+            "gaming",
+            "electronic"
+        ],
+        "category": "gaming",
         "inStock": true
     }
 ]
