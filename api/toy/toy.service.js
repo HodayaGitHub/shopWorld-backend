@@ -37,8 +37,6 @@ async function query(filterBy, sortBy) {
             const sortAsc = JSON.parse(sortBy.asc)
             sortCriteria[sortBy.by] = sortAsc ? 1 : -1
         }
-
-        console.log(sortCriteria)
         let toys = await collection.find(criteria).sort(sortCriteria).toArray()
         return toys
 

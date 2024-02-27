@@ -4,8 +4,6 @@ import { logger } from "../../services/logger.service.js"
 
 export async function getToys(req, res) {
     try {
-        console.log(req.query
-            )
         const { filterBy, sortBy } = req.query
 
         // logger.debug('Getting Toys', filterBy)
@@ -45,7 +43,6 @@ export async function removeToy(req, res) {
 export async function updateToy(req, res) {
     try {
         const toy = req.body
-        console.log(toy)
         const updatedToy = await toyService.update(toy)
         res.json(updatedToy)
     } catch (err) {

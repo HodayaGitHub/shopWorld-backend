@@ -20,7 +20,6 @@ const __dirname = dirname(__filename)
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve(__dirname, 'public')))
-    console.log('__dirname: ', __dirname)
 } else {
     const corsOptions = {
         origin: ['http://127.0.0.1:5173', 'http://localhost:5173', 'http://localhost:27017'],
