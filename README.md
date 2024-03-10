@@ -10,7 +10,6 @@ Welcome to the backend of the Demo Online Shop - Your One-Stop Destination for T
 5. [Environment Variables](#environment-variables)
 6. [Running the Server](#running-the-server)
 7. [API Endpoints](#api-endpoints)
-8. [Feedback and Support](#feedback-and-support)
 
 ## 1. Introduction
 This repository contains the backend code for the Demo Online Shop. It handles data storage, retrieval, and business logic for the online shop.
